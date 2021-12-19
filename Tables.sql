@@ -60,7 +60,7 @@ CREATE TABLE SubCategory(
 CREATE TABLE CartProducts(
 	Username VARCHAR(40) PRIMARY KEY,
 	FOREIGN KEY (Username) REFERENCES Customer ON DELETE CASCADE,
-	ProductNumber INT,
+	ProductNumber INT NOT NULL,
 	FOREIGN KEY (ProductNumber) REFERENCES Product ON DELETE CASCADE
 );
 
