@@ -35,7 +35,7 @@ CREATE TABLE Product(
 
 CREATE TABLE Comment(
 	CommentNumber INT PRIMARY KEY,
-	ProductNumber INT,
+	ProductNumber INT NOT NULL,
 	FOREIGN KEY (ProductNumber) REFERENCES Product ON DELETE CASCADE,
 	Username VARCHAR(40),
 	FOREIGN KEY (Username) REFERENCES Customer ON DELETE CASCADE,
