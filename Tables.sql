@@ -40,7 +40,7 @@ CREATE TABLE Comment(
 	Username VARCHAR(40),
 	FOREIGN KEY (Username) REFERENCES Customer ON DELETE CASCADE,
 	Cname VARCHAR(40),
-	CommentText VARCHAR(200),
+	CommentText VARCHAR(300),
 	CommentDate TIMESTAMP
 );
 
