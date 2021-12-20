@@ -69,3 +69,5 @@ CREATE TABLE Admin(
 	Password VARCHAR(40)
 );
 
+ALTER TABLE Customer 
+ALTER COLUMN Phone BIGINT;
