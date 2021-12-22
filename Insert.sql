@@ -72,3 +72,34 @@ INSERT INTO Order1
 	(2, 'Danialsb22', '11/16/2021 20:55:30', 'Delivered', 89000, 0),
 	(3, 'Sareh12', '10/28/2021 11:32:00', 'Delivered', 58000, 5000),
 	(4, 'Hasanmia79', '12/30/2021 15:56:52', 'Delivered', 151000, 0);
+
+INSERT INTO Comment
+	VALUES
+	(4, 5, 'Hasanmia79', 'Hasan', 'One of the highest quality cocoa powder I have ever taste!', '12/30/2021 22:52:12'),
+	(1, 1, 'Danialsb22', 'Danial', 'Milk was fresh', '11/17/2021 23:02:52'),
+	(2, 4, 'Danialsb22', 'Danial', 'Apples were rotten, such a waste of money!', '11/17/2021 23:22:47'),
+	(3, 1, 'Sareh12', 'Sareh', 'quite good, thanks!', '11/02/2021 10:11:34'),
+	(5, 8, 'gholizade_sb', 'Javad', 'Everything was satisfactory', '6/29/2021 12:40:06');
+
+
+INSERT INTO Cart
+	VALUES
+	('Danialsb22', 89000, 0),
+	('Sareh12', 58000, 5000),
+	('Hasanmia79', 151000, 0),
+	('gholizade_sb', 20000, 0),
+	('shabnam1344', 169000, 12000);
+
+INSERT INTO CartProducts
+	VALUES
+	('Danialsb22', 1),
+	('Danialsb22', 3),
+	('Danialsb22', 4),
+	('Sareh12', 6),
+	('Sareh12', 8),
+	('Sareh12', 3),
+	('Hasanmia79', 5),
+	('Hasanmia79', 3),
+	('gholizade_sb', 2),
+	('shabnam1344', 5),
+	('shabnam1344', 8);
