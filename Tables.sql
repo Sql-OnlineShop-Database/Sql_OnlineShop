@@ -41,7 +41,7 @@ CREATE TABLE Comment(
 	FOREIGN KEY (Username) REFERENCES Customer ON DELETE CASCADE,
 	Cname VARCHAR(40),
 	CommentText VARCHAR(300),
-	CommentDate TIMESTAMP
+	CommentDate SMALLDATETIME
 );
 
 CREATE TABLE Cart(
@@ -58,11 +58,13 @@ CREATE TABLE SubCategory(
 );
 
 CREATE TABLE CartProducts(
-	Username VARCHAR(40) PRIMARY KEY,
+	Username VARCHAR(40),
 	FOREIGN KEY (Username) REFERENCES Customer ON DELETE CASCADE,
 	ProductNumber INT NOT NULL,
-	FOREIGN KEY (ProductNumber) REFERENCES Product ON DELETE CASCADE
-);
+	FOREIGN KEY (ProductNumber) REFERENCES Product ON DELETE CASCADE,
+
+	CONSTRAINT PK_Username_ProductNumber PRIMARY KEY(Username, ProductNumber)
+)
 
 CREATE TABLE Admin(
 	Username VARCHAR(40) PRIMARY KEY,
