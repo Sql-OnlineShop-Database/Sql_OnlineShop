@@ -73,12 +73,12 @@ INSERT INTO Products(
 		Details,
 		Availablity
 	)
-VALUES (1, Null, 'milk', 10000, 'Choopan milk', 1),
-	(2, Null, 'milk', 10000, 'Mihan milk', 0),
-	(3, Null, 'cheese', 35000, 'pizza cheese', 1),
+VALUES (1, 3, 'milk', 10000, 'Choopan milk', 1),
+	(2, 3, 'milk', 10000, 'Mihan milk', 0),
+	(3, 4, 'cheese', 35000, 'pizza cheese', 1),
 	(
 		4,
-		Null,
+		16,
 		'Apple',
 		34000,
 		'Fresh and organic apple',
@@ -86,7 +86,7 @@ VALUES (1, Null, 'milk', 10000, 'Choopan milk', 1),
 	),
 	(
 		5,
-		Null,
+		6,
 		'Cocoa powder',
 		80000,
 		'Cocoa powder without sugar',
@@ -94,7 +94,7 @@ VALUES (1, Null, 'milk', 10000, 'Choopan milk', 1),
 	),
 	(
 		6,
-		Null,
+		16,
 		'Banana',
 		36000,
 		'Fresh and organic banana',
@@ -102,33 +102,13 @@ VALUES (1, Null, 'milk', 10000, 'Choopan milk', 1),
 	),
 	(
 		7,
-		Null,
+		14,
 		'Water',
 		3000,
 		'0.5 liter bottle of water',
 		1
 	);
-Update Products
-SET CategoryNumber = 3
-WHERE ProductNumber = 1;
-Update Products
-SET CategoryNumber = 3
-WHERE ProductNumber = 2;
-Update Products
-SET CategoryNumber = 4
-WHERE ProductNumber = 3;
-Update Products
-SET CategoryNumber = 16
-WHERE ProductNumber = 4;
-Update Products
-SET CategoryNumber = 6
-WHERE ProductNumber = 5;
-Update Products
-SET CategoryNumber = 16
-WHERE ProductNumber = 6;
-Update Products
-SET CategoryNumber = 14
-WHERE ProductNumber = 7;
+
 -- Insert Customers
 INSERT INTO Customers (
 		Username,
