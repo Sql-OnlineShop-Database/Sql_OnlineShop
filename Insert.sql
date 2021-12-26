@@ -314,15 +314,24 @@ VALUES ('Danialsb22', 89000, 0),
 	('gholizade_sb', 20000, 0),
 	('shabnam1344', 169000, 12);
 -- Insert CartProducts
-INSERT INTO CartProducts(Username, ProductNumber)
-VALUES ('Danialsb22', 1),
-	('Danialsb22', 3),
-	('Danialsb22', 4),
-	('Sareh12', 6),
-	('Sareh12', 7),
-	('Sareh12', 3),
-	('Hasanmia79', 5),
-	('Hasanmia79', 3),
-	('gholizade_sb', 2),
-	('shabnam1344', 5),
-	('shabnam1344', 7);
+INSERT INTO CartProducts(Username, ProductNumber, Quantity)
+VALUES ('Danialsb22', 1, 2),
+	('Danialsb22', 3, 3),
+	('Danialsb22', 4, 3),
+	('Sareh12', 6, 1),
+	('Sareh12', 7, 1),
+	('Sareh12', 3, 3),
+	('Hasanmia79', 5, 1),
+	('Hasanmia79', 3, 1),
+	('gholizade_sb', 2, 2),
+	('shabnam1344', 5, 2),
+	('shabnam1344', 7, 2);
+INSERT INTO OrderProducts(OrderNumber, ProductNumber, Quantity)
+VALUES (1, 1, 1),
+	(1, 2, 1),
+	(2, 5, 1),
+	(2, 7, 3),
+	(3, 6, 1),
+	(3, 7, 8),
+	(4, 5, 1),
+	(4, 3, 2);

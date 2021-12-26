@@ -74,16 +74,20 @@ CREATE TABLE SubCategories(
 CREATE TABLE CartProducts(
 	Username VARCHAR(40) NOT NULL,
 	ProductNumber INT NOT NULL,
+	Quantity INT NOT NULL,
 	PRIMARY KEY(Username, ProductNumber),
 	FOREIGN KEY (Username) REFERENCES Customers(Username) ON DELETE CASCADE ON UPDATE CASCADE,
-	FOREIGN KEY (ProductNumber) REFERENCES Products(ProductNumber) ON DELETE CASCADE ON UPDATE CASCADE
+	FOREIGN KEY (ProductNumber) REFERENCES Products(ProductNumber) ON DELETE CASCADE ON UPDATE CASCADE,
+	CHECK(Quantity > 0)
 );
 CREATE TABLE OrderProducts(
 	OrderNumber INT NOT NULL,
 	ProductNumber INT NOT NULL,
+	Quantity INT NOT NULL,
 	PRIMARY KEY(OrderNumber, ProductNumber),
 	FOREIGN KEY (OrderNumber) REFERENCES Orders(OrderNumber) ON DELETE CASCADE ON UPDATE CASCADE,
-	FOREIGN KEY (ProductNumber) REFERENCES Products(ProductNumber) ON DELETE CASCADE ON UPDATE CASCADE
+	FOREIGN KEY (ProductNumber) REFERENCES Products(ProductNumber) ON DELETE CASCADE ON UPDATE CASCADE,
+	CHECK(Quantity > 0)
 );
 CREATE TABLE Admin(
 	Username VARCHAR(40),
