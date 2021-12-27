@@ -8,8 +8,8 @@ WHERE Username IN ('Danialsb22', 'Hasanmia79')
 Select *
 From Customers
 Where Not Exists (Select Username 
-					FROM Orders		
-					WHERE Customers.Username = Orders.Username)
+			FROM Orders		
+			WHERE Customers.Username = Orders.Username)
 
 
 -- Comments which have been added together with the name of the produts, product number, username and email. 
@@ -19,10 +19,6 @@ INNER JOIN Comments
 ON Customers.Username = Comments.Username
 INNER JOIN Products
 ON Comments.ProductNumber = Products.ProductNumber;
-
-Select * from Orders
-select * from Customers
-select * from CartProducts
 
 
 -- name of products which are in the cart of the user "Sareh12".
