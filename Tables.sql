@@ -94,3 +94,11 @@ CREATE TABLE Admin(
 	Password VARCHAR(40),
 	PRIMARY KEY(Username)
 );
+
+-- Creating view
+GO
+CREATE VIEW Customers_Comments
+AS
+SELECT Comments.Username, Email, CommentText
+From Customers, Comments
+Where Customers.Username = Comments.Username;
